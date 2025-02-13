@@ -7,7 +7,7 @@ templates = Jinja2Templates(directory="app/templates")
 
 @router.get("/")
 async def home(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse("chat.html", {"request": request})
 
 @router.post("/send")
 async def send_message(message: str = Form(...)):
